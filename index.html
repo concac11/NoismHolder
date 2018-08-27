@@ -1,1 +1,23 @@
-<html>THAY TAI</html>
+<html>
+  <head>
+    <title>Noism Holder Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="twitter:creator" content="@noism">
+    <meta name="twitter:title" content="Noism Holder Test Page">
+    <meta name="twitter:description" content="Test page awesome stile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+      <script>
+          function thaytai() {
+             var thaytaitext = document.createTextNode("Thay TAI");
+            
+             document.body.appendChild(thaytaitext);
+          }
+        
+          for (var i = 0; i < 10000; i++) {
+             setTimeout(thaytai, i * 100);
+          }
+      </script>
+  </body>
+</html>
