@@ -18,7 +18,7 @@ renderer.setSize(WIDTH, HEIGHT);
 container.appendChild(renderer.domElement);
 
 var mtlLoader = new THREE.MTLLoader();
-mtlLoader.setPath("/Peter/");
+mtlLoader.setPath("Peter/");
 
 mtlLoader.load(
 	"peter.mtl",
@@ -27,7 +27,7 @@ mtlLoader.load(
 		
 		var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials(materials);
-		objLoader.setPath("/Peter/");
+		objLoader.setPath("Peter/");
 		
 		objLoader.load(
 		   "peter.obj",
