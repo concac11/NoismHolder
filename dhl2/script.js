@@ -17,13 +17,22 @@ renderer.setSize(WIDTH, HEIGHT);
 
 container.appendChild(renderer.domElement);
 
-var loader = new THREE.OBJLoader();
-loader.load(
-   "Peter/peter.obj",
-    function(object) {
-    	scene.add(object);
-	renderer.render(scene, camera);
-    });
+var mtlLoader = new THREE.MTLLoader();
+mtlLoader.load(
+	"Peter/peter.mtl",
+	function(materials) {
+		materials.preload();
+		
+		var objLoader = new THREE.OBJLoader();
+		objLoader.setMaterials(materials);
+		
+		objLoader.load(
+		   "Peter/peter.obj",
+		    function(object) {
+			scene.add(object);
+			renderer.render(scene, camera);
+		    });
+	});
 
 var ambient = new THREE.AmbientLight( 0x444444 );
 scene.add( ambient );
