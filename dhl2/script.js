@@ -25,6 +25,10 @@ loader.load(
 	renderer.render(scene, camera);
     });
 
+var light = new THREE.PointLight( 0xff0000, 1, 100 );
+light.position.set( 50, 50, 50 );
+scene.add( light );
+
 function update() {
 	renderer.render(scene, camera);
 	requestAnimationFrame(update);
