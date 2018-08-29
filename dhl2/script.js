@@ -19,7 +19,7 @@ container.appendChild(renderer.domElement);
 
 var loader = new THREE.OBJLoader();
 loader.load(
-   "Peter/Peter.obj",
+   "Peter/peter.obj",
     function(object) {
     	scene.add(object);
 	renderer.render(scene, camera);
