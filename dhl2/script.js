@@ -35,7 +35,6 @@ mtlLoader.load(
 			scene.add(object);
 			    
 			// Adjust offset
-			object.position.y = -10;
 			object.position.z = -5;
 			    
 			renderer.render(scene, camera);
