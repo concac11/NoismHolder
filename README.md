@@ -1,3 +1,3 @@
-# Noism (Staging)
+# Noism (staging)
 
 Not yet ready for production.
